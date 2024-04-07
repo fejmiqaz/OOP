@@ -3,30 +3,6 @@
 #include<iomanip>
 using namespace std;
 
-/* Create a structure (in C++ programming language) Film for representing films (movies). The structure should contain: (5 points)
-
-Movie title (array of 100 characters)
-Duration (integer)
-Price (decimal number)
-Is there a student discount (1-yes, 0-no)
-Create a structure FilmFestival, that will contain: (10 points)
-
-Name of the festival (array of 100 characters)
-Place (where the festival is held) (array of 100 characters)
-List of films that will be presented on the festival (array of no more than 100 elements of type Film)
-Number of elements in the list (integer)
-Write a function print that will print the information for each film in a given film festival (5 points) in the following format:
-
-[Name of the festival] [Place]
-[Title1] [Duration1] [Price1]
-[Title2] [Duration2] [Price2]
-
-Write a function BestFestival that accepts an array of FilmFestival variables and number of festivals in the array and will
- print the name of the festival that is cheapest for students and the place it is held. For the cheapest festival is considered
- the one that has most films that have student discount. If there is more that one festival with these characteristics than print
- the festival that has the longest duration of all the films. (20 points)
-Complete functionality of the whole program */
-
 struct Film{
     char name[100];
     int time;
