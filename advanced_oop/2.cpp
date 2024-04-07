@@ -3,16 +3,6 @@
 #include<iomanip>
 using namespace std;
 
-/* Define a structure for Driver with fields for his name (char array of max 100) and time in seconds (integer).
- * Then define a structure Race with fields for location (char array of max 100), number of drivers (integers) and
- * an array of drivers (max 100).
-
-Write a main function that will read the data for N races and for each race will print the top 3 drivers by their time
-in increasing order.
-
-For the format of the input data and format of the output, see the sample input and sample output (the time is printed in
-two fixed places for minutes and two fixed places with leading zero for seconds, separated with :). */
-
 struct Driver{
     char name[100];
     int time;
