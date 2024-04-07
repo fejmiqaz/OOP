@@ -2,13 +2,6 @@
 #include <cstring>
 using namespace std;
 
-// your code here
-
-#include<iostream>
-#include<cstring>
-
-using namespace std;
-
 class Parcel {
 private:
     int ID;
