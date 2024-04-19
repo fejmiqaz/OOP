@@ -56,8 +56,15 @@ public:
         return os;
     }
 
-    double & operator-=(double commission){
-        balance -= commission;
+    // idk which one of these should i use here xD
+
+    /*Account & operator-=(const Account & other){
+        balance -= other.balance;
+        return * this;
+    }*/
+
+    double & operator-=(double commision){
+        balance -= commision;
         return balance;
     }
 };
