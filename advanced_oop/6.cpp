@@ -24,6 +24,14 @@ public:
         copy(other);
     }
 
+    Character & operator=(const Character & other){
+        if(this!=&other){
+            delete[] variable;
+            copy(other);
+        }
+        return * this;
+    }
+
 //    Character(const char *variable){
 //        if(variable!= nullptr){
 //            this->variable = new char [strlen(variable)+1];
