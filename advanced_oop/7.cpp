@@ -22,6 +22,14 @@ public:
     Patnik(const Patnik & other){
         copy(other);
     }
+
+    Patnik & operator=(const Patnik & other){
+        if(this!=&other){
+            copy(other);
+        }
+        return * this;
+    }
+    
     friend ostream & operator<<(ostream& out, Patnik & patnik){
         out << "Name: " << patnik.name << endl;
         out << "Carriage class: " << patnik.number << endl;
