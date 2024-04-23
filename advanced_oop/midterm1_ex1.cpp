@@ -48,6 +48,10 @@ public:
         return * this;
     }
 
+    int getIdd() const {
+        return idd;
+    }
+
     friend ostream &operator<<(ostream &os, const Account &account) {
         os << account.idd << " - " << account.name << " ";
         if (account.type == PERSONAL){ os << "person";}
@@ -56,15 +60,12 @@ public:
         return os;
     }
 
-    // idk which one of these should i use here xD
+    bool operator==(const Account & acc){
+        return (idd == acc.idd);
+    }
 
-    /*Account & operator-=(const Account & other){
-        balance -= other.balance;
-        return * this;
-    }*/
-
-    double & operator-=(double commision){
-        balance -= commision;
+    double & operator-=(double commission){
+        balance -= commission;
         return balance;
     }
 };
@@ -98,6 +99,12 @@ public:
     }
 
     Bank & operator+=(const Account & acc){
+        for(int i = 0; i < n; i++){
+            if(accounts[i].getIdd() == acc.getIdd()){
+                return * this;
+            }
+        }
+
         Account * tmp = new Account[n+1];
         for(int i = 0; i < n; i++){
             tmp[i] = accounts[i];
